@@ -3,7 +3,7 @@
 ## Abstract
 In order to make web3 gaming fun we need to onboard more web2 gaming dev and studios. In order to do so, **Web3 Game Dev Toolbox** offers platform and SDK any web2 developer can use and add web3 component into web2 game without the need of learning web3 or Solidity.
 
-This project consists from 4 component
+### This project consists from 4 components:
 
 1. Gaming Assets Smart Contract (folder name: gamin-assets-contracts)
 2. Web app for creating projects and NFT-izing gaming assets
