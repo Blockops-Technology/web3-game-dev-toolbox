@@ -1,5 +1,4 @@
-import { Button, Link } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Button } from "@chakra-ui/react";
 import { chainIdToChain } from "@/helpers/chainIdToChain";
 
 const ProjectCard = ({id, chain}) => (
@@ -8,9 +7,9 @@ const ProjectCard = ({id, chain}) => (
     <p>Project id: {id}</p>
     <p>Chain: {chainIdToChain(chain).name}</p>
     <div className="flex gap-4">
-      <Link as={NextLink} href={`/project/${id}`}>
+      <a href={`/project/${id}`}>
         <Button className="mt-5">View project</Button>
-      </Link>
+      </a>
       <Button onClick={() => alert("Beyond hackathon scope ;)")} variant="outline" className="mt-5">Edit project</Button>
     </div>
   </div>
