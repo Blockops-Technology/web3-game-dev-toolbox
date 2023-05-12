@@ -57,7 +57,7 @@ const Form = () => {
     const assetsList = [];
     const contractCreationTnxHashes = await Promise.all(
         assets.map(async (asset, i) => {
-        const contractSymbol = asset.name.replace(" ", "").toUpperCase();
+        const contractSymbol = asset.name.replaceAll(" ", "").toUpperCase();
         const tokenUrl = `ipfs://${assetsJsonCids[i]}/metadata.json`;
         return deployGamingAssetContract(selectedChain, asset.name, contractSymbol, tokenUrl);
       })
