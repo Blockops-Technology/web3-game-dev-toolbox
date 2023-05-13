@@ -6,14 +6,17 @@ import axios from "axios";
 import { BACKEND_URL } from "./constants";
 import {chainIdToChain} from "./helpers";
 
-export const sendAssetToUser = async (chain: Chain, userAddress: string, assetContractAddress: string) => {
-  const wallet = getWalletByChain(chain);
-
+export const sendAssetToUser = async (assetId: number, userAddress: string) => {
   try {
-    console.log(`Sending ${assetContractAddress} asset to user: ${userAddress} on ${chain.name}`);
+    const { data } = await axios.get(`${BACKEND_URL}/assets/${assetId}`);
 
-    const tnxHash = await wallet.writeContract({
-      address: assetContractAddress,
+    const chain: Chain = chainIdToChain(data?.project?.chain);
+    const wallet = getWalletByChain(chain);
+
+    console.log(`Sending ${data?.contractAddress} asset to user: ${userAddress} on ${chain.name}`);
+
+    const response = await wallet.writeContract({
+      address: data?.contractAddress,
       abi: GamingAssetContract.abi,
       functionName: "mint",
       args: [userAddress],
@@ -21,11 +24,32 @@ export const sendAssetToUser = async (chain: Chain, userAddress: string, assetCo
 
     console.log("Asset sent!");
 
-    return tnxHash;
+    console.log("response", response);
+
+    return response;
   } catch (e) {
-    console.log("Asset sending failed");
+    console.log("Asset sending failed!");
     return e;
   }
+  // const wallet = getWalletByChain(chain);
+  //
+  // try {
+  //   console.log(`Sending ${assetContractAddress} asset to user: ${userAddress} on ${chain.name}`);
+  //
+  //   const tnxHash = await wallet.writeContract({
+  //     address: assetContractAddress,
+  //     abi: GamingAssetContract.abi,
+  //     functionName: "mint",
+  //     args: [userAddress],
+  //   });
+  //
+  //   console.log("Asset sent!");
+  //
+  //   return tnxHash;
+  // } catch (e) {
+  //   console.log("Asset sending failed");
+  //   return e;
+  // }
 }
 
 export const verifyAccess = async (assetId: number, userAddress: string) => {
