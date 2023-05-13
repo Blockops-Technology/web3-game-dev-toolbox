@@ -1,10 +1,11 @@
 import { Chain } from "viem";
 import GamingAssetContract from "./gamingAssetContract.json";
-import { getWalletByChain } from "./adminWallet";
-import { getPublicClientByChain } from "./publicClients";
+import ERC20Contract from "./erc20Contract.json";
+import { ethereumWalletClient, getWalletByChain } from "./adminWallet";
+import { ethereumPublicClient, getPublicClientByChain } from "./publicClients";
 import axios from "axios";
-import { BACKEND_URL } from "./constants";
-import {chainIdToChain} from "./helpers";
+import { BACKEND_URL, APECOIN_ADDRESS } from "./constants";
+import { chainIdToChain } from "./helpers";
 
 export const sendAssetToUser = async (assetId: number, userAddress: string) => {
   try {
@@ -31,25 +32,6 @@ export const sendAssetToUser = async (assetId: number, userAddress: string) => {
     console.log("Asset sending failed!");
     return e;
   }
-  // const wallet = getWalletByChain(chain);
-  //
-  // try {
-  //   console.log(`Sending ${assetContractAddress} asset to user: ${userAddress} on ${chain.name}`);
-  //
-  //   const tnxHash = await wallet.writeContract({
-  //     address: assetContractAddress,
-  //     abi: GamingAssetContract.abi,
-  //     functionName: "mint",
-  //     args: [userAddress],
-  //   });
-  //
-  //   console.log("Asset sent!");
-  //
-  //   return tnxHash;
-  // } catch (e) {
-  //   console.log("Asset sending failed");
-  //   return e;
-  // }
 }
 
 export const verifyAccess = async (assetId: number, userAddress: string) => {
@@ -75,6 +57,24 @@ export const verifyAccess = async (assetId: number, userAddress: string) => {
     console.log("Check failed!");
     return e;
   }
+}
+
+export const verifyApeCoinHolder = async (address: string) => {
+  return ethereumPublicClient.readContract({
+    address: APECOIN_ADDRESS,
+    abi: ERC20Contract.abi,
+    functionName: "balanceOf",
+    args: [address],
+  });
+}
+
+export const sendApeCoinHolder = async (address: string, value: number) => {
+  return ethereumWalletClient.writeContract({
+    address: APECOIN_ADDRESS,
+    abi: ERC20Contract.abi,
+    functionName: "transfer",
+    args: [address, value],
+  });
 }
 
 export const sum = (a: number, b: number) => {

@@ -1,5 +1,5 @@
 import {Chain, createWalletClient, http} from 'viem'
-import { filecoinHyperspace, gnosisChiado, polygonMumbai } from 'viem/chains';
+import {filecoinHyperspace, gnosisChiado, mainnet, polygonMumbai} from 'viem/chains';
 import { mnemonicToAccount } from "viem/accounts";
 import { linea } from "./lineaChain";
 import { MNEMONIC } from "./constants";
@@ -9,6 +9,12 @@ const account = mnemonicToAccount(MNEMONIC);
 // viem add chain and switch chain not working for some reason
 // Not to lose precious hackathon time creating instance of a wallet for every chain
 // Otherwise should be done inside chain picker
+const ethereumWalletClient = createWalletClient({
+  account,
+  chain: mainnet,
+  transport: http()
+});
+
 const polygonWalletClient = createWalletClient({
   account,
   chain: polygonMumbai,
@@ -61,5 +67,6 @@ export {
   gnosisChiadoWalletClient,
   fvmWalletClient,
   lineaWalletClient,
+  ethereumWalletClient,
   getWalletByChain,
 }

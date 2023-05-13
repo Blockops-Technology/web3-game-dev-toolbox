@@ -43,3 +43,8 @@ This project is created during 36 hour long hackathon (ETHGlobal Lisbon) by *qui
 ### Mantle:
 - NFT/Gaming
 <br />Contract Mantle Testnet explorer: https://explorer.testnet.mantle.xyz/address/0x341624fC23ad53fAd7f7697D3705be39D7132ee9
+
+### ApeCoin:
+- Best Integration or Best Contribution
+<br/>Projects can easily verify if player is ApeCoin Holder
+<br/>Projects can easily send ApeCoin to players

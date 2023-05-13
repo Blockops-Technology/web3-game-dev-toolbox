@@ -1,6 +1,11 @@
 import {Chain, createPublicClient, http} from "viem";
-import { filecoinHyperspace, gnosisChiado, polygonMumbai } from "viem/chains";
+import {filecoinHyperspace, gnosisChiado, mainnet, polygonMumbai} from "viem/chains";
 import { linea } from "./lineaChain";
+
+const ethereumPublicClient = createPublicClient({
+  chain: mainnet,
+  transport: http()
+});
 
 const polygonPublicClient = createPublicClient({
   chain: polygonMumbai,
@@ -46,6 +51,7 @@ const getPublicClientByChain = (chain: Chain) => {
 }
 
 export {
+  ethereumPublicClient,
   polygonPublicClient,
   gnosisChiadoPublicClient,
   fvmPublicClient,
