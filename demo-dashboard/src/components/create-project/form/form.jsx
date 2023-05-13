@@ -5,7 +5,7 @@ import { storageClient } from "@/lib/web3Storage";
 import AssetCard from "@/components/create-project/assetCard/assetCard";
 import ChainPicker from "@/components/create-project/chainPicker/chainPicker";
 import { SUPPORTED_CHAINS } from "@/static/constants";
-import { deployGamingAssetContract } from "@/lib/deployGamingAssetContract";
+import { deployGamingAssetContract } from "@/static/deployGamingAssetContract";
 import { getPublicClientByChain } from "@/lib/publicClient";
 
 const Form = () => {

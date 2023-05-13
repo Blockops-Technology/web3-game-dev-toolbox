@@ -1,6 +1,7 @@
 import { createPublicClient, http } from "viem";
 import { filecoinHyperspace, gnosisChiado, polygonMumbai, scrollTestnet } from "viem/chains";
 import { linea } from "@/static/lineaChain";
+import { mantle } from "@/static/mantleChain";
 
 const polygonPublicClient = createPublicClient({
   chain: polygonMumbai,
@@ -27,6 +28,12 @@ const scrollPublicClient = createPublicClient({
   transport: http()
 });
 
+
+const mantlePublicClient = createPublicClient({
+  chain: mantle,
+  transport: http()
+});
+
 const getPublicClientByChain = (chain) => {
   let walletClient;
 
@@ -46,6 +53,9 @@ const getPublicClientByChain = (chain) => {
     case scrollTestnet.name:
       walletClient = scrollPublicClient;
       break;
+    case mantle.name:
+      walletClient = mantlePublicClient;
+      break;
     default:
       walletClient = polygonPublicClient;
   }
@@ -59,5 +69,6 @@ export {
   fvmPublicClient,
   lineaPublicClient,
   scrollPublicClient,
+  mantlePublicClient,
   getPublicClientByChain
 }
