@@ -57,6 +57,18 @@ router.get("/projects/:id", async (ctx) => {
   }
 });
 
+router.get("/assets/:id", async (ctx) => {
+  const project = await Asset.findByPk(ctx.params.id, {
+    include: Project
+  });
+  if (!project) {
+    ctx.status = 404;
+    ctx.body = "Asset not found";
+  } else {
+    ctx.body = project;
+  }
+});
+
 router.post("/projects", async (ctx) => {
   const { name, chain } = ctx.request.body;
   const project = await Project.create({ name, chain });
