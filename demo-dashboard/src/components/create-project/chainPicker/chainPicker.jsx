@@ -32,6 +32,12 @@ const ChainPicker = ({selectedChain, setSelectedChain}) => {
           onClick={handleChainSelect}
           chainLogo="/images/linea-logo.svg"
         />
+        <ChainCard
+          chain={SUPPORTED_CHAINS.SCROLL}
+          active={selectedChain.name === SUPPORTED_CHAINS.SCROLL.name}
+          onClick={handleChainSelect}
+          chainLogo="/images/scroll-logo.png"
+        />
       </div>
     </>
   );

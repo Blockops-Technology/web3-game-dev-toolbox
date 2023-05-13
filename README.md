@@ -23,11 +23,17 @@ This project is created during 36 hour long hackathon (ETHGlobal Lisbon) by *qui
 <br/> Link to tweet: https://twitter.com/0xdevelopera/status/1657328744988659712?s=20
 
 ### Gnosis:
+- Most innovative dApps on Gnosis Chain
+<br/>Contract Blockscout Chiado: https://blockscout.com/gnosis/chiado/address/0x2B0077C982218c416D110954ADB6e2b23d2F6506
 
 ### Filecoin Virtual Machine:
 - Best Project Built On FVM:
-<br/>Contract Filecoin Hyperspace blockexplorer: https://hyperspace.filfox.info/en/message/0xf52711bf9d3a97aecdef4bbd6789b399d43837d353509227869a879533b90507
+<br/>Contract Filecoin Hyperspace block explorer: https://hyperspace.filfox.info/en/message/0xf52711bf9d3a97aecdef4bbd6789b399d43837d353509227869a879533b90507
 - Top 10 on FVM:
 <br/> All assets are stored on IPFS via [web.storage](https://web3.storage/) service
 
 ### Linea:
+
+### Scroll:
+- Deploy your smart contract on Scroll:
+<br/>Contract Blockscout Scroll: https://blockscout.scroll.io/address/0x5C7e5Ae9b5D3D445a2ed05151E13f8a9E3F5d4Fd

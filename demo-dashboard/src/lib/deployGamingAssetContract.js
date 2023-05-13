@@ -1,6 +1,6 @@
-import { fvmWalletClient, gnosisChiadoWalletClient, lineaWalletClient, polygonWalletClient } from "@/lib/adminWallet";
+import { fvmWalletClient, gnosisChiadoWalletClient, lineaWalletClient, polygonWalletClient, scrollWalletClient } from "@/lib/adminWallet";
 import GamingAssetContract from "@/static/gamingAssetContract.json";
-import { filecoinHyperspace, gnosisChiado, polygonMumbai } from "viem/chains";
+import { filecoinHyperspace, gnosisChiado, polygonMumbai, scrollTestnet } from "viem/chains";
 import { linea } from "@/static/lineaChain";
 
 const deployGamingAssetContract = async (chain, assetName, symbol, tokenUrl) => {
@@ -18,6 +18,9 @@ const deployGamingAssetContract = async (chain, assetName, symbol, tokenUrl) => 
       break;
     case linea.name:
       walletClient = lineaWalletClient;
+      break;
+    case scrollTestnet.name:
+      walletClient = scrollWalletClient;
       break;
     default:
       walletClient = polygonWalletClient;

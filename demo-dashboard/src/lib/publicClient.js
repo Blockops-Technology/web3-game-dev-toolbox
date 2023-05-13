@@ -1,5 +1,5 @@
 import { createPublicClient, http } from "viem";
-import { filecoinHyperspace, gnosisChiado, polygonMumbai } from "viem/chains";
+import { filecoinHyperspace, gnosisChiado, polygonMumbai, scrollTestnet } from "viem/chains";
 import { linea } from "@/static/lineaChain";
 
 const polygonPublicClient = createPublicClient({
@@ -22,6 +22,11 @@ const lineaPublicClient = createPublicClient({
   transport: http()
 });
 
+const scrollPublicClient = createPublicClient({
+  chain: scrollTestnet,
+  transport: http()
+});
+
 const getPublicClientByChain = (chain) => {
   let walletClient;
 
@@ -38,6 +43,9 @@ const getPublicClientByChain = (chain) => {
     case linea.name:
       walletClient = lineaPublicClient;
       break;
+    case scrollTestnet.name:
+      walletClient = scrollPublicClient;
+      break;
     default:
       walletClient = polygonPublicClient;
   }
@@ -50,5 +58,6 @@ export {
   gnosisChiadoPublicClient,
   fvmPublicClient,
   lineaPublicClient,
+  scrollPublicClient,
   getPublicClientByChain
 }

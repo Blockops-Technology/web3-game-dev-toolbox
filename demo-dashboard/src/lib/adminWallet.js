@@ -1,5 +1,5 @@
 import { createWalletClient, http } from 'viem'
-import { filecoinHyperspace, gnosisChiado, polygonMumbai } from 'viem/chains';
+import { filecoinHyperspace, gnosisChiado, polygonMumbai, scrollTestnet } from 'viem/chains';
 import { mnemonicToAccount } from "viem/accounts";
 import { MNEMONIC } from "@/static/constants";
 import { linea } from "@/static/lineaChain";
@@ -33,6 +33,12 @@ const lineaWalletClient = createWalletClient({
   transport: http()
 });
 
+const scrollWalletClient = createWalletClient({
+  account,
+  chain: scrollTestnet,
+  transport: http()
+});
+
 const getWalletByChain = (chain) => {
   let walletClient;
 
@@ -49,6 +55,9 @@ const getWalletByChain = (chain) => {
     case linea.name:
       walletClient = lineaWalletClient;
       break;
+    case scrollTestnet.name:
+      walletClient = scrollWalletClient;
+      break;
     default:
       walletClient = polygonWalletClient;
   }
@@ -61,5 +70,6 @@ export {
   gnosisChiadoWalletClient,
   fvmWalletClient,
   lineaWalletClient,
+  scrollWalletClient,
   getWalletByChain,
 }
