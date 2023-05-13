@@ -33,7 +33,13 @@ This project is created during 36 hour long hackathon (ETHGlobal Lisbon) by *qui
 <br/> All assets are stored on IPFS via [web.storage](https://web3.storage/) service
 
 ### Linea:
+- Best Dapp on Linea
+<br/>Contract Blockscout Linea: https://explorer.goerli.linea.build/address/0x341624fC23ad53fAd7f7697D3705be39D7132ee9
 
 ### Scroll:
 - Deploy your smart contract on Scroll:
 <br/>Contract Blockscout Scroll: https://blockscout.scroll.io/address/0x5C7e5Ae9b5D3D445a2ed05151E13f8a9E3F5d4Fd
+
+### Mantle:
+- NFT/Gaming
+<br />Contract Mantle Testnet explorer: https://explorer.testnet.mantle.xyz/address/0x341624fC23ad53fAd7f7697D3705be39D7132ee9
