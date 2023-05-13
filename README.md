@@ -18,33 +18,33 @@ This project is created during 36 hour long hackathon (ETHGlobal Lisbon) by *qui
 ## Qualifying Bounties:
 
 ### Polygon:
-- Build #onPolygon in Public Pool Prize
-<br/>Contract Polygonscan: https://mumbai.polygonscan.com/address/0x5c7e5ae9b5d3d445a2ed05151e13f8a9e3f5d4fd
-<br/> Link to tweet: https://twitter.com/0xdevelopera/status/1657328744988659712?s=20
+- Build #onPolygon in Public Pool Prize:
+<br/>Contract Polygonscan - https://mumbai.polygonscan.com/address/0x5c7e5ae9b5d3d445a2ed05151e13f8a9e3f5d4fd
+<br/> Link to tweet - https://twitter.com/0xdevelopera/status/1657328744988659712?s=20
 
 ### Gnosis:
-- Most innovative dApps on Gnosis Chain
+- Most innovative dApps on Gnosis Chain:
 <br/>Contract Blockscout Chiado: https://blockscout.com/gnosis/chiado/address/0x2B0077C982218c416D110954ADB6e2b23d2F6506
 
 ### Filecoin Virtual Machine:
 - Best Project Built On FVM:
-<br/>Contract Filecoin Hyperspace block explorer: https://hyperspace.filfox.info/en/message/0xf52711bf9d3a97aecdef4bbd6789b399d43837d353509227869a879533b90507
+<br/>Contract Filecoin Hyperspace block explorer - https://hyperspace.filfox.info/en/message/0xf52711bf9d3a97aecdef4bbd6789b399d43837d353509227869a879533b90507
 - Top 10 on FVM:
 <br/> All assets are stored on IPFS via [web.storage](https://web3.storage/) service
 
 ### Linea:
-- Best Dapp on Linea
-<br/>Contract Blockscout Linea: https://explorer.goerli.linea.build/address/0x341624fC23ad53fAd7f7697D3705be39D7132ee9
+- Best Dapp on Linea:
+<br/>Contract Blockscout Linea - https://explorer.goerli.linea.build/address/0x341624fC23ad53fAd7f7697D3705be39D7132ee9
 
 ### Scroll:
 - Deploy your smart contract on Scroll:
-<br/>Contract Blockscout Scroll: https://blockscout.scroll.io/address/0x5C7e5Ae9b5D3D445a2ed05151E13f8a9E3F5d4Fd
+<br/>Contract Blockscout Scroll - https://blockscout.scroll.io/address/0x5C7e5Ae9b5D3D445a2ed05151E13f8a9E3F5d4Fd
 
 ### Mantle:
-- NFT/Gaming
-<br />Contract Mantle Testnet explorer: https://explorer.testnet.mantle.xyz/address/0x341624fC23ad53fAd7f7697D3705be39D7132ee9
+- NFT/Gaming:
+<br />Contract Mantle Testnet explorer - https://explorer.testnet.mantle.xyz/address/0x341624fC23ad53fAd7f7697D3705be39D7132ee9
 
 ### ApeCoin:
-- Best Integration or Best Contribution
-<br/>Projects can easily verify if player is ApeCoin Holder
-<br/>Projects can easily send ApeCoin to players
+- Best Integration or Best Contribution:
+<br/>- Projects can easily verify if player is ApeCoin Holder
+<br/>- Projects can easily send ApeCoin to players
