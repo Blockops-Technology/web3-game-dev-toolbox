@@ -24,6 +24,8 @@ export default function Home() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/projects/${projectId}`);
     const data = await response.json();
 
+    console.log(data);
+
     const publicClient = getPublicClientByChain(data.chain);
 
     const contractsData = await Promise.all(data.assets.map(async (asset) => {
@@ -55,8 +57,6 @@ export default function Home() {
     const metadataResponse = await fetch(metadataUrl);
     const metadata = await metadataResponse.json();
     const imageUrl = metadata.image.replace("ipfs://", "https://ipfs.io/ipfs/")
-
-
 
     const projectData = {
       ...data,
@@ -107,6 +107,7 @@ export default function Home() {
           project.assets.map((asset, i) => (
             <div key={i} className="p-9 mb-10 rounded-lg bg-zinc-900 border border-zinc-700">
               <img className="mb-10" src={asset.imageUrl} alt={asset.name} />
+              <p>Asset ID: <strong>{asset.id}</strong></p>
               <p>Name: <strong>{asset.name}</strong></p>
               <p>Symbol: <strong>{asset.symbol}</strong></p>
               <p>Contract address: <strong>{asset.contractAddress}</strong></p>
