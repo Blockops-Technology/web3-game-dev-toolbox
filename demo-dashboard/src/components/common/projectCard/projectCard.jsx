@@ -6,11 +6,11 @@ const ProjectCard = ({id, chain}) => (
     <p className="text-lg font-bold">{name}</p>
     <p>Project id: {id}</p>
     <p>Chain: {chainIdToChain(chain).name}</p>
-    <div className="flex gap-4">
+    <div className="flex flex-wrap gap-4 mt-5">
       <a href={`/project/${id}`}>
-        <Button className="mt-5">View project</Button>
+        <Button>View project</Button>
       </a>
-      <Button onClick={() => alert("Beyond hackathon scope ;)")} variant="outline" className="mt-5">Edit project</Button>
+      <Button onClick={() => alert("Beyond hackathon scope ;)")} variant="outline">Edit project</Button>
     </div>
   </div>
 );

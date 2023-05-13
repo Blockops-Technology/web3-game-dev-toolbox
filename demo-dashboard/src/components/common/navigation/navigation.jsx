@@ -9,7 +9,7 @@ const Navigation = () => (
     </a>
     <div className="flex items-center gap-10">
       <Link as={NextLink} href="/">Projects</Link>
-      <Link as={NextLink} href="/playground">Playground</Link>
+      <Link as={NextLink} href="/sdk-playground">SDK Playground</Link>
       <a href="/create-project">
         <Button size="lg">Create new project</Button>
       </a>
