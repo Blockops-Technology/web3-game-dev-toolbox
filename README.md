@@ -15,6 +15,14 @@ This project is created during 36 hour long hackathon (ETHGlobal Lisbon) by *qui
 
 ## Running project locally:
 
+1. Git clone monorepo
+2. `cd simple-server` && `npm i`
+3. Run `node index.js`
+4. In separate command line tab `cd demo-dashboard`
+5. Create `.env` file and paste `NEXT_PUBLIC_BACKEND_URL=http://localhost:3003`
+6. Run `npm i`
+7. `npm run dev`
+
 ## Qualifying Bounties:
 
 ### Polygon:
