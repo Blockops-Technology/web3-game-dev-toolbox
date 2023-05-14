@@ -24,7 +24,7 @@ This project is created during 36 hour long hackathon (ETHGlobal Lisbon) by *qui
 
 ### Gnosis:
 - Most innovative dApps on Gnosis Chain:
-<br/>Contract Blockscout Chiado: https://blockscout.com/gnosis/chiado/address/0x2B0077C982218c416D110954ADB6e2b23d2F6506
+<br/>Contract Blockscout Chiado - https://blockscout.com/gnosis/chiado/address/0x2B0077C982218c416D110954ADB6e2b23d2F6506
 
 ### Filecoin Virtual Machine:
 - Best Project Built On FVM:
