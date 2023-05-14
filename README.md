@@ -18,9 +18,13 @@ This project is created during 36 hour long hackathon (ETHGlobal Lisbon) by *qui
 1. Git clone monorepo
 2. `cd simple-server` && `npm i`
 3. Run `node index.js`
+4. In separate command line tab `cd sdk`
+5. Run `yarn install` **Must be yarn**
+6. Run `yarn build` **Must be yarn**
 4. In separate command line tab `cd demo-dashboard`
 5. Create `.env` file and paste `NEXT_PUBLIC_BACKEND_URL=http://localhost:3003`
 6. Run `npm i`
+7. Run `npm i ../sdk`
 7. `npm run dev`
 
 ## Qualifying Bounties:
